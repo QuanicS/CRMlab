@@ -1,0 +1,1019 @@
+{
+  "id": "759bb57e-5bf2-488e-bfd6-d79523523536",
+  "version": "2.0",
+  "name": "CRM test",
+  "url": "http://127.0.0.1:8000/products/",
+  "tests": [{
+    "id": "a482b86e-1baf-498b-aad7-f32bab049414",
+    "name": "auth",
+    "commands": [{
+      "id": "329b7497-fdcf-48fe-aa15-e97aae685d3e",
+      "comment": "",
+      "command": "open",
+      "target": "http://127.0.0.1:8000/signin/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e41d48c9-a2fb-48ff-9180-3a6788a217c9",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1440x912",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "63113e37-f39c-4cda-ba20-75d1532405d0",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.form-group:nth-child(2) > .form-control", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "admin"
+    }, {
+      "id": "396e4921-c509-45d5-a23f-4d0413124036",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.form-group:nth-child(3) > .form-control", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "admin"
+    }, {
+      "id": "b176d1c4-aaf1-4500-a3a6-c17e9c1004ec",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btnSubmit",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9241a2a0-3e8a-446c-bc87-30029b9f4891",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "CRM",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fc53eba8-cff0-47ce-9b8c-56adce019d26",
+      "comment": "",
+      "command": "close",
+      "target": "http://127.0.0.1:8000",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "0960edcf-f1ff-4c3b-97b9-c1aea7a62682",
+    "name": "Заполнение Клиента",
+    "commands": [{
+      "id": "2c6bd8a2-9235-4c46-88b2-94a5eea98854",
+      "comment": "",
+      "command": "open",
+      "target": "http://127.0.0.1:8000/contacts/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0cbd368b-6c99-4b5e-9517-78020d60a922",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1456x928",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "af99a01b-6f0f-4cff-b9c9-310005b5baff",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=+ Контакт",
+      "targets": [
+        ["linkText=+ Контакт", "linkText"],
+        ["css=.btn-warning", "css:finder"],
+        ["xpath=//a[contains(text(),'+ Контакт')]", "xpath:link"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/div/div/div[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/add_contact/')]", "xpath:href"],
+        ["xpath=//div[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'+ Контакт')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c6747840-6394-4689-9d6b-95afd8d7c3a1",
+      "comment": "",
+      "command": "type",
+      "target": "id=id_name",
+      "targets": [
+        ["id=id_name", "id"],
+        ["name=name", "name"],
+        ["css=#id_name", "css:finder"],
+        ["xpath=//input[@id='id_name']", "xpath:attributes"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/div/div/form/div/div/p/input", "xpath:idRelative"],
+        ["xpath=//p/input", "xpath:position"]
+      ],
+      "value": "Петров Владислав Ильич"
+    }, {
+      "id": "b8faebfd-2143-4f21-b368-30659dbf32de",
+      "comment": "",
+      "command": "type",
+      "target": "id=id_phone",
+      "targets": [
+        ["id=id_phone", "id"],
+        ["name=phone", "name"],
+        ["css=#id_phone", "css:finder"],
+        ["xpath=//input[@id='id_phone']", "xpath:attributes"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/div/div/form/div/div/p[2]/input", "xpath:idRelative"],
+        ["xpath=//p[2]/input", "xpath:position"]
+      ],
+      "value": "89324561718"
+    }, {
+      "id": "4fccc302-7724-4d9f-b74c-3fd52b86ca97",
+      "comment": "",
+      "command": "type",
+      "target": "id=id_email",
+      "targets": [
+        ["id=id_email", "id"],
+        ["name=email", "name"],
+        ["css=#id_email", "css:finder"],
+        ["xpath=//input[@id='id_email']", "xpath:attributes"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/div/div/form/div/div/p[3]/input", "xpath:idRelative"],
+        ["xpath=//p[3]/input", "xpath:position"]
+      ],
+      "value": "vladislav@gmail.com"
+    }, {
+      "id": "5b0bf83c-91a4-4b69-a437-2478146ed4a3",
+      "comment": "",
+      "command": "type",
+      "target": "id=id_address",
+      "targets": [
+        ["id=id_address", "id"],
+        ["name=address", "name"],
+        ["css=#id_address", "css:finder"],
+        ["xpath=//input[@id='id_address']", "xpath:attributes"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/div/div/form/div/div/p[4]/input", "xpath:idRelative"],
+        ["xpath=//p[4]/input", "xpath:position"]
+      ],
+      "value": "Кутузова 17, кв 7"
+    }, {
+      "id": "656725af-c5ee-4483-b133-c4d7e25af312",
+      "comment": "",
+      "command": "click",
+      "target": "name=Submit",
+      "targets": [
+        ["name=Submit", "name"],
+        ["css=.btn-info", "css:finder"],
+        ["xpath=//button[@name='Submit']", "xpath:attributes"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/div/div/form/div/div[2]/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Сохранить')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "689c121c-033c-456d-837e-3c69837dc711",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tr:nth-child(1) > td:nth-child(1)",
+      "targets": [
+        ["css=tr:nth-child(4) > td:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/div/div[2]/table/tbody/tr[4]/td", "xpath:idRelative"],
+        ["xpath=//tr[4]/td", "xpath:position"],
+        ["xpath=//td[contains(.,'Петров Владислав Ильич')]", "xpath:innerText"]
+      ],
+      "value": "Петров Владислав Ильич"
+    }]
+  }, {
+    "id": "d8831b65-6caa-46cb-bd9a-b3ef5300097b",
+    "name": "Заполнение Заказа",
+    "commands": [{
+      "id": "fa8ba12f-802c-48c1-b1d4-387493c65458",
+      "comment": "",
+      "command": "open",
+      "target": "http://127.0.0.1:8000/orders/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1224f4a2-de6d-4cd2-90df-5ca2801225a2",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1440x912",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0e331a29-a629-4e3a-be0a-41fecd99fcd7",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=+ Заказ",
+      "targets": [
+        ["linkText=+ Заказ", "linkText"],
+        ["css=.btn-warning", "css:finder"],
+        ["xpath=//a[contains(text(),'+ Заказ')]", "xpath:link"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/create_order/')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'+ Заказ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5c75b4ee-360a-485d-9903-a121c1fc0d1b",
+      "comment": "",
+      "command": "select",
+      "target": "id=id_customer",
+      "targets": [],
+      "value": "label=Петров Владислав Ильич"
+    }, {
+      "id": "469a84b6-ae18-4297-a2f5-efbad637f3fd",
+      "comment": "",
+      "command": "select",
+      "target": "id=id_product",
+      "targets": [],
+      "value": "label=ул. Есенина, кв-137"
+    }, {
+      "id": "e343a512-55f9-4298-a288-47a589023c0b",
+      "comment": "",
+      "command": "click",
+      "target": "css=p:nth-child(3)",
+      "targets": [
+        ["css=p:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/div/div/form/div/div/p[3]", "xpath:idRelative"],
+        ["xpath=//p[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7ee30601-f7e3-429e-b54b-f28cef534c39",
+      "comment": "",
+      "command": "select",
+      "target": "id=id_status",
+      "targets": [],
+      "value": "label=ЗАВЕРШЁН"
+    }, {
+      "id": "258166d0-616b-4ebb-9a26-4038b0892f98",
+      "comment": "",
+      "command": "click",
+      "target": "name=Submit",
+      "targets": [
+        ["name=Submit", "name"],
+        ["css=.btn-info", "css:finder"],
+        ["xpath=//button[@name='Submit']", "xpath:attributes"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/div/div/form/div/div[2]/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Сохранить')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "dcdad48a-d0e9-41a6-b279-8fcf8d267f2b",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tbody > tr:nth-child(1) > th",
+      "targets": [
+        ["css=tbody > tr:nth-child(1) > th", "css:finder"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/div/div[2]/table/tbody/tr/th", "xpath:idRelative"],
+        ["xpath=//tbody/tr/th", "xpath:position"],
+        ["xpath=//th[contains(.,'ул. Есенина, кв-137')]", "xpath:innerText"]
+      ],
+      "value": "ул. Есенина, кв-137"
+    }, {
+      "id": "84efd036-6253-4149-8524-980c2f146a8f",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=tr:nth-child(1) > td:nth-child(4)",
+      "targets": [
+        ["css=tr:nth-child(1) > td:nth-child(4)", "css:finder"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/div/div[2]/table/tbody/tr/td[3]", "xpath:idRelative"],
+        ["xpath=//td[3]", "xpath:position"],
+        ["xpath=//td[contains(.,'ЗАВЕРШЁН')]", "xpath:innerText"]
+      ],
+      "value": "ЗАВЕРШЁН"
+    }]
+  }, {
+    "id": "8bdd5cb2-ef1c-46bd-a856-9f7d633e8f25",
+    "name": "Заполнение Квартиры",
+    "commands": [{
+      "id": "9dae8fb0-58e1-459a-a0e2-8ae335f90ca3",
+      "comment": "",
+      "command": "open",
+      "target": "http://127.0.0.1:8000/products/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "72908544-e7ad-45c7-9e37-46b7156717b5",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1440x912",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6e345aef-0a44-42ae-988b-243ca081ca5e",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=+ Квартира",
+      "targets": [
+        ["linkText=+ Квартира", "linkText"],
+        ["css=.btn-warning", "css:finder"],
+        ["xpath=//a[contains(text(),'+ Квартира')]", "xpath:link"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/create_product/')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'+ Квартира')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e3f8b22c-f23d-4447-80ee-15e21be3382b",
+      "comment": "",
+      "command": "type",
+      "target": "id=id_name",
+      "targets": [
+        ["id=id_name", "id"],
+        ["name=name", "name"],
+        ["css=#id_name", "css:finder"],
+        ["xpath=//input[@id='id_name']", "xpath:attributes"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/div/div/form/div/div/p/input", "xpath:idRelative"],
+        ["xpath=//p/input", "xpath:position"]
+      ],
+      "value": "ул. Есенина, кв-137"
+    }, {
+      "id": "89d9d70b-889f-4974-a4f1-a697952b3c68",
+      "comment": "",
+      "command": "type",
+      "target": "id=id_cost",
+      "targets": [
+        ["id=id_cost", "id"],
+        ["name=cost", "name"],
+        ["css=#id_cost", "css:finder"],
+        ["xpath=//input[@id='id_cost']", "xpath:attributes"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/div/div/form/div/div/p[2]/input", "xpath:idRelative"],
+        ["xpath=//p[2]/input", "xpath:position"]
+      ],
+      "value": "70000000"
+    }, {
+      "id": "93fcffcc-f3d2-47f6-adac-f461373e8eb4",
+      "comment": "",
+      "command": "type",
+      "target": "id=id_vendor",
+      "targets": [
+        ["id=id_vendor", "id"],
+        ["name=vendor", "name"],
+        ["css=#id_vendor", "css:finder"],
+        ["xpath=//input[@id='id_vendor']", "xpath:attributes"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/div/div/form/div/div/p[3]/input", "xpath:idRelative"],
+        ["xpath=//p[3]/input", "xpath:position"]
+      ],
+      "value": "Григорьев Анатолий Анатольевич"
+    }, {
+      "id": "c64300b5-03cb-4269-a3d2-2a119294b4ee",
+      "comment": "",
+      "command": "type",
+      "target": "id=id_description",
+      "targets": [
+        ["id=id_description", "id"],
+        ["css=#id_description", "css:finder"],
+        ["xpath=//input[@id='id_description']", "xpath:attributes"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/div/div/form/div/div/p[4]/input", "xpath:idRelative"],
+        ["xpath=//p[4]/input", "xpath:position"]
+      ],
+      "value": "Светлая квартира, оборудованная современной мебелью. 2 комнаты."
+    }, {
+      "id": "f461d8d4-b0d4-4790-82bd-18835c2eb1f7",
+      "comment": "",
+      "command": "click",
+      "target": "name=Submit",
+      "targets": [
+        ["name=Submit", "name"],
+        ["css=.btn-info", "css:finder"],
+        ["xpath=//button[@name='Submit']", "xpath:attributes"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/div/div/form/div/div[2]/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Сохранить')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ffa94948-2a08-4525-846b-f0e03f16019d",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=td:nth-child(2)",
+      "targets": [
+        ["css=td:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/div/div[2]/table/tbody/tr/td", "xpath:idRelative"],
+        ["xpath=//td", "xpath:position"],
+        ["xpath=//td[contains(.,'ул. Есенина, кв-137')]", "xpath:innerText"]
+      ],
+      "value": "ул. Есенина, кв-137"
+    }]
+  }, {
+    "id": "f7dbdcae-2a3a-49f6-9cd4-3cded1ad8b12",
+    "name": "Заполнение Задачи",
+    "commands": [{
+      "id": "45020831-34cc-41d1-8e65-52df65e9f073",
+      "comment": "",
+      "command": "open",
+      "target": "http://127.0.0.1:8000/task/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a13a92fb-837c-458a-8298-3138dc329ede",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1456x928",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0f0786d5-7d03-40d9-a796-09445fa6653b",
+      "comment": "",
+      "command": "type",
+      "target": "name=task_name",
+      "targets": [
+        ["name=task_name", "name"],
+        ["css=.col-3 > .form-control", "css:finder"],
+        ["xpath=//input[@name='task_name']", "xpath:attributes"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/div/form/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "Заполнить клиентов"
+    }, {
+      "id": "b2658817-dc83-4001-a87a-b857011812d5",
+      "comment": "",
+      "command": "type",
+      "target": "name=task_desc",
+      "targets": [
+        ["name=task_desc", "name"],
+        ["css=.col-8 > .form-control", "css:finder"],
+        ["xpath=//input[@name='task_desc']", "xpath:attributes"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/div/form/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "Заполнить заявки клиентов до 14"
+    }, {
+      "id": "b9f0506e-ce44-4c92-98e0-ce994cf081d8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@value='Add']", "xpath:attributes"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/div/form/div/div[3]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Добавить')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7f18b5e9-fc33-4c37-9cde-214eb89bd9b6",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tr:nth-child(1) > td:nth-child(1)",
+      "targets": [
+        ["css=tr:nth-child(1) > td:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/div/div/table/tbody/tr/td", "xpath:idRelative"],
+        ["xpath=//td", "xpath:position"],
+        ["xpath=//td[contains(.,'Заполнить клиентов')]", "xpath:innerText"]
+      ],
+      "value": "Заполнить клиентов"
+    }]
+  }, {
+    "id": "3b19e4c3-adb0-495d-8289-08278bfdd843",
+    "name": "Invalid login",
+    "commands": [{
+      "id": "24299b18-2965-41b0-bb7b-e370f42d5229",
+      "comment": "",
+      "command": "open",
+      "target": "http://127.0.0.1:8000/signin/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "70d2e906-2156-41de-91bf-32c91257ab02",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1440x912",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d19cdf38-1bf3-4b9e-b858-63ef97411e17",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.form-group:nth-child(2) > .form-control", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "root"
+    }, {
+      "id": "7409df53-5135-4dd0-8462-9c3dfedaa5e1",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.form-group:nth-child(3) > .form-control", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "root"
+    }, {
+      "id": "8654d339-2af8-4833-8411-252229482350",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btnSubmit",
+      "targets": [
+        ["css=.btnSubmit", "css:finder"],
+        ["xpath=//input[@value='Войти']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "85776d62-2a7c-4c80-aeff-c9069f58eecc",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.alert",
+      "targets": [
+        ["css=.alert", "css:finder"],
+        ["xpath=//div/div/div/div/div", "xpath:position"]
+      ],
+      "value": "Username or Password is not correct."
+    }, {
+      "id": "49b2993a-11d1-440a-97d5-c3b7c1603171",
+      "comment": "",
+      "command": "close",
+      "target": "http://127.0.0.1:8000/signin/",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "9718ab56-5711-46a2-9ca6-708ce7dfe4f9",
+    "name": "Удаление задачи",
+    "commands": [{
+      "id": "dcc9c974-99e7-4107-ab05-02bcf6c19173",
+      "comment": "",
+      "command": "open",
+      "target": "http://127.0.0.1:8000/products/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "06a79f38-a483-4568-ae2c-df123b423e5b",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1440x912",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "80f241b1-7adb-44a3-8f6a-19aab573edbc",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Задачи",
+      "targets": [
+        ["linkText=Задачи", "linkText"],
+        ["css=li:nth-child(6) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Задачи')]", "xpath:link"],
+        ["xpath=//div[@id='sidebar-wrapper']/ul/li[6]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/task/')]", "xpath:href"],
+        ["xpath=//li[6]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Задачи')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "08c39d14-7cab-4037-82ec-d98fa1a237fe",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bi-trash",
+      "targets": [
+        ["css=.bi-trash", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "0a079888-21b5-4413-a453-50a96ae59bcd",
+      "comment": "",
+      "command": "assertNotText",
+      "target": "css=html",
+      "targets": [
+        ["css=html", "css:finder"],
+        ["xpath=//html", "xpath:position"]
+      ],
+      "value": "Заполнить заявки клиентов до 14"
+    }]
+  }, {
+    "id": "92aa5f05-4250-45e2-b7bd-56e85611a5f6",
+    "name": "Удаление клиента",
+    "commands": [{
+      "id": "c02ce787-151a-4130-8860-5a54019cbeb4",
+      "comment": "",
+      "command": "open",
+      "target": "http://127.0.0.1:8000/products/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e3f64217-5168-4d87-b6c3-e04532262661",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1440x912",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "45900e58-f161-4484-a705-82f55ff49dad",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Клиенты",
+      "targets": [
+        ["linkText=Клиенты", "linkText"],
+        ["css=li:nth-child(5) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Клиенты')]", "xpath:link"],
+        ["xpath=//div[@id='sidebar-wrapper']/ul/li[5]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/contacts/')]", "xpath:href"],
+        ["xpath=//li[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Клиенты')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c1ade397-22d6-4a0b-877e-6010633b4cb9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bi-trash",
+      "targets": [
+        ["css=.bi-trash", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "0adfee43-d2b3-4d2b-bb00-c3cdd386e6c3",
+      "comment": "",
+      "command": "assertNotText",
+      "target": "css=html",
+      "targets": [
+        ["css=html", "css:finder"],
+        ["xpath=//html", "xpath:position"]
+      ],
+      "value": "Петров Владислав Ильич"
+    }]
+  }, {
+    "id": "977f7db0-d505-49a1-b885-a6b418532784",
+    "name": "Удаление квартиры",
+    "commands": [{
+      "id": "bb144f96-3359-4482-b03c-d2bd3e7d1f40",
+      "comment": "",
+      "command": "open",
+      "target": "http://127.0.0.1:8000/products/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3ae4f364-189a-44bd-9c19-29f7837bcf64",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1440x912",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ea6f8497-3bc7-4388-8053-385fe65b0be0",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bi-trash",
+      "targets": [
+        ["css=.bi-trash", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "df1a0fef-4775-43b6-81c6-136350b1bfd6",
+      "comment": "",
+      "command": "assertNotText",
+      "target": "css=html",
+      "targets": [
+        ["css=html", "css:finder"],
+        ["xpath=//html", "xpath:position"]
+      ],
+      "value": "ул. Есенина, кв-137"
+    }]
+  }, {
+    "id": "41d8ae9b-c3c8-4fb7-90c5-4fbc9a7df79f",
+    "name": "Удаление заказа",
+    "commands": [{
+      "id": "679ca2b0-a762-4965-be80-3dd70cef65ba",
+      "comment": "",
+      "command": "open",
+      "target": "http://127.0.0.1:8000/products/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "757ed40a-0e39-4f39-af40-4b673b47b4ef",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1440x912",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "09d88dba-6974-4560-bce5-51bf411dae22",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Оформить заказ",
+      "targets": [
+        ["linkText=Оформить заказ", "linkText"],
+        ["css=li:nth-child(3) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Оформить заказ')]", "xpath:link"],
+        ["xpath=//div[@id='sidebar-wrapper']/ul/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/orders/')]", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Оформить заказ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7877f836-ea8b-46c2-8e72-32486ca21c3b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bi-trash",
+      "targets": [
+        ["css=.bi-trash", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "16a5a089-c3c6-453d-b5a7-75adf19374d7",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Delete",
+      "targets": [
+        ["linkText=Delete", "linkText"],
+        ["css=.btn-danger", "css:finder"],
+        ["xpath=//a[contains(text(),'Delete')]", "xpath:link"],
+        ["xpath=//a[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='actionModal']/div/div/div[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/delete_order/4')]", "xpath:href"],
+        ["xpath=//div[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Delete')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d6ef0db0-0013-4550-91a7-c4c095abe79c",
+      "comment": "",
+      "command": "assertNotText",
+      "target": "css=html",
+      "targets": [
+        ["css=html", "css:finder"],
+        ["xpath=//html", "xpath:position"]
+      ],
+      "value": "ул. Есенина, кв-137"
+    }, {
+      "id": "30d01ed1-2970-426b-8496-72c1b72528ab",
+      "comment": "",
+      "command": "assertNotText",
+      "target": "css=html",
+      "targets": [],
+      "value": "ЗАВЕРШЁН"
+    }]
+  }, {
+    "id": "993b0a9b-3642-423f-80a6-ce47c74da8e0",
+    "name": "Изменить телефон клиента",
+    "commands": [{
+      "id": "67e07317-db7e-4279-983a-290c786ea50d",
+      "comment": "",
+      "command": "open",
+      "target": "http://127.0.0.1:8000/products/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e4fa4e80-74b4-4360-ba69-e9bf56dd7090",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1440x912",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ca9ffe5b-c602-4544-b71c-2b27769e4530",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Клиенты",
+      "targets": [
+        ["linkText=Клиенты", "linkText"],
+        ["css=li:nth-child(5) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Клиенты')]", "xpath:link"],
+        ["xpath=//div[@id='sidebar-wrapper']/ul/li[5]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/contacts/')]", "xpath:href"],
+        ["xpath=//li[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Клиенты')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2015c53a-7dac-4ea1-b7f1-b05cd9615944",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-sm:nth-child(1)",
+      "targets": [
+        ["css=.btn-sm:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/div/div[2]/table/tbody/tr/td[5]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/update_contact/3/')]", "xpath:href"],
+        ["xpath=//td[5]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c07e1d5a-2737-4cae-990d-2f99721bcf54",
+      "comment": "",
+      "command": "click",
+      "target": "css=.card-body",
+      "targets": [
+        ["css=.card-body", "css:finder"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/div/div/form/div/div", "xpath:idRelative"],
+        ["xpath=//form/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "82e09f4f-097c-4a16-a71d-44e85ed2d3a6",
+      "comment": "",
+      "command": "type",
+      "target": "id=id_phone",
+      "targets": [
+        ["id=id_phone", "id"],
+        ["name=phone", "name"],
+        ["css=#id_phone", "css:finder"],
+        ["xpath=//input[@id='id_phone']", "xpath:attributes"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/div/div/form/div/div/p[2]/input", "xpath:idRelative"],
+        ["xpath=//p[2]/input", "xpath:position"]
+      ],
+      "value": "89324768902"
+    }, {
+      "id": "a8717631-46f3-4d1c-9075-4ce9d14386ed",
+      "comment": "",
+      "command": "click",
+      "target": "name=Submit",
+      "targets": [
+        ["name=Submit", "name"],
+        ["css=.btn-info", "css:finder"],
+        ["xpath=//button[@name='Submit']", "xpath:attributes"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/div/div/form/div/div[2]/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Сохранить')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6926ca84-7d44-41cc-8590-499209de79ff",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=td:nth-child(2)",
+      "targets": [
+        ["css=td:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/div/div[2]/table/tbody/tr/td[2]", "xpath:idRelative"],
+        ["xpath=//td[2]", "xpath:position"],
+        ["xpath=//td[contains(.,'89324768902')]", "xpath:innerText"]
+      ],
+      "value": "89324768902"
+    }]
+  }, {
+    "id": "2549ec02-55bf-44a7-9dbf-6c8cc20d73fe",
+    "name": "Изменить стоимость квартиры",
+    "commands": [{
+      "id": "97eeb0d8-8b7f-4e05-9c0d-cb65d2c21267",
+      "comment": "",
+      "command": "open",
+      "target": "http://127.0.0.1:8000/products/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ae5c5400-7f8a-492e-bf37-d448cc6a9098",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1440x912",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9191c18c-86e3-4f15-b453-8e3128c53ce2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-outline-dark",
+      "targets": [
+        ["css=.btn-outline-dark", "css:finder"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/div/div[2]/table/tbody/tr/td[6]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/update_product/7/')]", "xpath:href"],
+        ["xpath=//td[6]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b4e65106-2285-4295-a67e-4b30aba3d0d2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.card-body",
+      "targets": [
+        ["css=.card-body", "css:finder"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/div/div/form/div/div", "xpath:idRelative"],
+        ["xpath=//form/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "90336639-4f5d-4601-a8f2-168e431e0faa",
+      "comment": "",
+      "command": "type",
+      "target": "id=id_cost",
+      "targets": [
+        ["id=id_cost", "id"],
+        ["name=cost", "name"],
+        ["css=#id_cost", "css:finder"],
+        ["xpath=//input[@id='id_cost']", "xpath:attributes"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/div/div/form/div/div/p[2]/input", "xpath:idRelative"],
+        ["xpath=//p[2]/input", "xpath:position"]
+      ],
+      "value": "80000000"
+    }, {
+      "id": "343d4c51-c8f4-4c68-8f20-fdebe9701ec2",
+      "comment": "",
+      "command": "click",
+      "target": "name=Submit",
+      "targets": [
+        ["name=Submit", "name"],
+        ["css=.btn-info", "css:finder"],
+        ["xpath=//button[@name='Submit']", "xpath:attributes"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/div/div/form/div/div[2]/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Сохранить')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ecf2659e-3075-46d0-8346-762ff4ef1882",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=td:nth-child(6)",
+      "targets": [
+        ["css=td:nth-child(6)", "css:finder"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/div/div[2]/table/tbody/tr/td[5]", "xpath:idRelative"],
+        ["xpath=//td[5]", "xpath:position"],
+        ["xpath=//td[contains(.,'80000000,0')]", "xpath:innerText"]
+      ],
+      "value": "80000000,0"
+    }]
+  }, {
+    "id": "a61789a9-375b-4099-88a1-d67d040d2d60",
+    "name": "Изменить статуса заказ",
+    "commands": [{
+      "id": "7f18c28b-65f5-447d-90d1-bf7a4b2b2ec7",
+      "comment": "",
+      "command": "open",
+      "target": "http://127.0.0.1:8000/products/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e4232831-1de6-402c-a67e-0aac9a362636",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1440x912",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f0688ac5-484c-4eb0-8d6a-8c6d46aa64d2",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Оформить заказ",
+      "targets": [
+        ["linkText=Оформить заказ", "linkText"],
+        ["css=li:nth-child(3) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Оформить заказ')]", "xpath:link"],
+        ["xpath=//div[@id='sidebar-wrapper']/ul/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/orders/')]", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Оформить заказ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0f0f3615-64d6-49c7-a392-09274ff46717",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bi-pencil",
+      "targets": [
+        ["css=.bi-pencil", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "1a59eff0-02fd-4ba2-ae04-85273b251c72",
+      "comment": "",
+      "command": "select",
+      "target": "id=id_status",
+      "targets": [],
+      "value": "label=ОТМЕНЕНО"
+    }, {
+      "id": "de1b45fd-f557-47d0-ade4-8e30aca3dd6c",
+      "comment": "",
+      "command": "click",
+      "target": "name=Submit",
+      "targets": [
+        ["name=Submit", "name"],
+        ["css=.btn-info", "css:finder"],
+        ["xpath=//button[@name='Submit']", "xpath:attributes"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/div/div/form/div/div[2]/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Сохранить')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7d1663e3-78e7-4946-b9ae-cd8f2c68a2bb",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=td:nth-child(4)",
+      "targets": [
+        ["css=td:nth-child(4)", "css:finder"],
+        ["xpath=//div[@id='page-content-wrapper']/div/div/div/div[2]/table/tbody/tr/td[3]", "xpath:idRelative"],
+        ["xpath=//td[3]", "xpath:position"],
+        ["xpath=//td[contains(.,'ОТМЕНЕНО')]", "xpath:innerText"]
+      ],
+      "value": "ОТМЕНЕНО"
+    }]
+  }],
+  "suites": [{
+    "id": "f1e009f5-9d57-471c-92ea-7031a8cb205a",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["a482b86e-1baf-498b-aad7-f32bab049414"]
+  }],
+  "urls": ["http://127.0.0.1:8000/", "http://127.0.0.1:8000/contacts/", "http://127.0.0.1:8000/task/", "http://127.0.0.1:8000/products/"],
+  "plugins": []
+}
